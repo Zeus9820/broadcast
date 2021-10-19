@@ -21,7 +21,7 @@ public class MainActivity extends FlutterActivity {
         new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL)
                 .setMethodCallHandler(
                         (call, result) -> {
-                                android.widget.Toast.makeText(MainActivity.this, "Calling Statement Reached", Toast.LENGTH_SHORT).show();
+
                                 MyReceiver r = new MyReceiver();
                                 IntentFilter i = new IntentFilter("android.permission.READ_PHONE_STATE");
                                 registerReceiver(r, i);
